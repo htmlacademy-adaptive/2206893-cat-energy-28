@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Кэт энерджи</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico"><!-- 32×32 -->
+    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png"><!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
+  </head>
+  <body class="main-body">
+    <header class="main-header container">
+      <a class="main-header__logo-link" href="index.html">
+        <img class="main-header__icon-mobile only-mobile-show" src="img/svg/cat-energy-icon.svg" width="34" height="38" alt="Логотип-иконка магазина.">
+        <img class="main-header__text-mobile only-mobile-show" src="img/svg/cat-energy-text.svg" width="101" height="18" alt="Логотип-надпись магазина.">
+        <img class="main-header__not-mobile not-mobile-show" src="img/svg/cat-energy-logo-tablet.svg" width="174" height="52" alt="Логотип магазина.">
+      </a>
+      <nav class="main-nav main-nav--nojs">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--active" href="#">Подбор программы</a>
+          </li>
+        </ul>
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+      </nav>
+    </header>
+    <main class="main-container">
+      <section class="program-selection container">
+        <h1 class="program-selection__title title">Подбор программы</h1>
+        <form class="program-selection__form" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="program-selection program-selection--presentation">
+            <h2 class="program-selection__presentation-title">Заполните анкету, и мы подберем программу питания для вашего кота</h2>
+            <ul class="program-selection__list">
+              <li class="program-selection__item">
+                <label class="program-selection__label">
+                  <span class="program-selection__label-text subtitle">ИМЯ:*</span>
+                  <input class="program-selection__input subtitle" type="text" value="барсик" minlength="2" placeholder="Введите имя" name="name" required>
+                </label>
+              </li>
+              <li class="program-selection__item">
+                <label class="program-selection__label">
+                  <span class="program-selection__label-text subtitle">Вес (кг):*</span>
+                  <input class="program-selection__input subtitle" type="number" value="7" placeholder="Введите вес" name="weight" required>
+                </label>
+              </li>
+              <li class="program-selection__item">
+                <label class="program-selection__label">
+                  <span class="program-selection__label-text ">Возраст (лет):</span>
+                  <input class="program-selection__input subtitle" type="number" value="7" placeholder="Введите возраст" name="age">
+                </label>
+              </li>
+            </ul>
+          </div>
+          <fieldset class="program-selection__section program-selection__section--filter-group">
+            <legend class="visually-hidden">Пожелания к типу программы</legend>
+            <ul class="program-selection__list program-selection__list--programs">
+              <li class="program-selection__item">
+                <label class="program-selection__control">
+                  <input class="visually-hidden program-selection__control-input" type="radio" name="goal" value="slim" checked>
+                  <span class="program-selection__control-mark"></span>
+                  <span class="program-selection__control-text subtitle">Похудение</span>
+                </label>
+              </li>
+              <li class="program-selection__item">
+                <label class="program-selection__control">
+                  <input class="visually-hidden program-selection__control-input" type="radio" name="goal" value="pro">
+                  <span class="program-selection__control-mark"></span>
+                  <span class="program-selection__control-text subtitle">Набор массы</span>
+                </label>
+              </li>
+              <li class="program-selection__item">
+                <label class="program-selection__control">
+                  <input class="visually-hidden program-selection__control-input" type="radio" name="goal" value="need-help">
+                  <span class="program-selection__control-mark"></span>
+                  <span class="program-selection__control-text subtitle">Не знаю (Нужен ваш совет)</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <div class="program-selection program-selection--presentation">
+            <h2 class="program-selection__title secondary-title">Контактные данные (владельца кота)</h2>
+            <ul class="program-selection__list">
+              <li class="program-selection__item">
+                <label class="program-selection__label">
+                  <span class="program-selection__label-text subtitle">E-mail:*</span>
+                  <input class="program-selection__input subtitle" type="email" value="kuklachev@gmail.com" placeholder="Ваша почта" name="email" required>
+                </label>
+              </li>
+              <li class="program-selection__item">
+                <label class="program-selection__label">
+                  <span class="program-selection__label-text subtitle">Телефон:*</span>
+                  <input class="program-selection__input subtitle" type="tel" value="8 (960) 900-60-90" placeholder="Ваш номер" name="telephone" pattern="\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" required>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="program-selection__section program-selection__section--comment">
+            <label class="program-selection__label">
+              <span class="program-selection__title secondary-title">Комментарий</span>
+              <textarea class="program-selection__input program-selection__input--comment subtitle" id="comment" name="comment" value="Расскажите обо всех повадках кота"></textarea>
+            </label>
+          </div>
+          <fieldset class="program-selection__section program-selection__section--filter-group">
+            <legend class="program-selection__title secondary-title">Дополнительно</legend>
+            <ul class="program-selection__list program-selection__list--extra">
+              <li class="program-selection__item">
+                <label class="program-selection__control">
+                  <input class="visually-hidden program-selection__control-input" type="checkbox" name="extras" value="sweetener" checked>
+                  <span class="program-selection__control-mark"></span>
+                  <span class="program-selection__control-text subtitle">Сахарозаменитель</span>
+                </label>
+              </li>
+              <li class="program-selection__item">
+                <label class="program-selection__control">
+                  <input class="visually-hidden program-selection__control-input" type="checkbox" name="extras" value="water">
+                  <span class="program-selection__control-mark"></span>
+                  <span class="program-selection__control-text subtitle">Питьевая вода</span>
+                </label>
+              </li>
+              <li class="program-selection__item">
+                <label class="program-selection__control">
+                  <input class="visually-hidden program-selection__control-input" type="checkbox" name="extras" value="milk">
+                  <span class="program-selection__control-mark"></span>
+                  <span class="program-selection__control-text subtitle">Молоко</span>
+                </label>
+              </li>
+              <li class="program-selection__item">
+                <label class="program-selection__control">
+                  <input class="visually-hidden program-selection__control-input" type="checkbox" name="extras" value="vitamins">
+                  <span class="program-selection__control-mark"></span>
+                  <span class="program-selection__control-text subtitle">Витамины</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="program-selection__submit-button subtitle button" type="submit">Отправить заявку</button>
+          <span class="program-selection__footnote text">* — Обязательные поля</span>
+        </form>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <section class="footer-contacts">
+        <div class="container">
+          <div class="footer-contacts__text-container">
+            <h2 class="footer-contacts__title subtitle">Приглашаем к сотрудничеству дилеров!</h2>
+            <address class="footer-contacts__address">
+              <span class="footer-contacts__street text">ул. Большая Конюшенная, д. 19/8</span>
+              <span class="footer-contacts__city text">Санкт-Петербург</span>
+            </address>
+          </div>
+          <div class="footer-contacts__map">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/products/map-desktop@1x.png 1x, img/products/map-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/map-tablet@1x.png 1x, img/map-tablet@2x.png 2x">
+              <img class="footer-contacts__map-image" src="img/map-mobile@1x.png" width="320" height="362" alt="Cat Energy на карте." srcset="img/map-mobile@2x.png 2x">
+            </picture>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <a class="main-footer__logo-link" href="index.html">
+          <!-- Пока стоит лого как img, дальше будет переделано на маски -->
+          <img class="footer-icon" src="img/svg/cat-energy-logo-footer.svg" width="128" height="24" alt="Логотип магазина">
+        </a>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" target="_blank" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">Мы во ВКонтакте</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" target="_blank" href="https://www.youtube.com/user/htmlacademyru">
+              <span class="visually-hidden">Мы в Youtube</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--telegram" target="_blank" href="https://t.me/htmlacademy">
+              <span class="visually-hidden">Мы в Telegram</span>
+            </a>
+          </li>
+        </ul>
+        <div class="main-footer__copyright">
+          <a class="copyright__link" target="_blank" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Страница курса HTML Academy">
+            <span class="copyright__text text">HTML Academy</span>
+            <!-- Пока стоит как svg, дальше будет переделано на маски -->
+            <svg class="copyright__icon" xmlns="http://www.w3.org/2000/svg" width="27" height="34" viewBox="0 0 27 34" aria-hidden="true"><path fill="currentColor" d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+    </footer>
+  </body>
+</html>
