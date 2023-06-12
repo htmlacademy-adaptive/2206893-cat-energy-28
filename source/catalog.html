@@ -10,12 +10,12 @@
     <link rel="apple-touch-icon" href="img/favicons/apple.png"><!-- 180×180 -->
     <link rel="manifest" href="manifest.webmanifest">
   </head>
-  <body>
-    <header class="page-header container">
-      <a class="page-header__logo-link" href="index.html">
-        <img class="page-header__icon-mobile only-mobile-show" src="img/svg/cat-energy-icon.svg" width="34" height="38" alt="Логотип-иконка магазина.">
-        <img class="page-header__text-mobile only-mobile-show" src="img/svg/cat-energy-text.svg" width="101" height="18" alt="Логотип-надпись магазина.">
-        <img class="page-header__not-mobile not-mobile-show" src="img/svg/cat-energy-logo-tablet.svg" width="174" height="52" alt="Логотип магазина.">
+  <body class="main-body">
+    <header class="main-header container">
+      <a class="main-header__logo-link" href="index.html">
+        <img class="main-header__icon-mobile only-mobile-show" src="img/svg/cat-energy-icon.svg" width="34" height="38" alt="Логотип-иконка магазина.">
+        <img class="main-header__text-mobile only-mobile-show" src="img/svg/cat-energy-text.svg" width="101" height="18" alt="Логотип-надпись магазина.">
+        <img class="main-header__not-mobile not-mobile-show" src="img/svg/cat-energy-logo-tablet.svg" width="174" height="52" alt="Логотип магазина.">
       </a>
       <nav class="main-nav main-nav--nojs">
         <ul class="main-nav__list">
@@ -34,7 +34,7 @@
         </button>
       </nav>
     </header>
-    <main class="main-index">
+    <main class="main-container">
       <section class="main-products container">
         <h1 class="main-products__title title">Каталог продукции</h1>
         <ul class="main-products__list">
@@ -234,7 +234,7 @@
         </div>
       </section>
     </main>
-    <footer class="page-footer">
+    <footer class="main-footer">
       <section class="footer-contacts">
         <div class="container">
           <div class="footer-contacts__text-container">
@@ -254,7 +254,7 @@
         </div>
       </section>
       <div class="container">
-        <a class="main-header__logo" href="index.html">
+        <a class="main-footer__logo-link" href="index.html">
           <!-- Пока стоит лого как img, дальше будет переделано на маски -->
           <img class="footer-icon" src="img/svg/cat-energy-logo-footer.svg" width="128" height="24" alt="Логотип магазина">
         </a>
