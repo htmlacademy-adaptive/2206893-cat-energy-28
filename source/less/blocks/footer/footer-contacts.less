@@ -1,0 +1,20 @@
+.footer-contacts {
+  &--main-page {
+    background-color: @base-color;
+  }
+
+  &__text-container {
+    .grid-style(initial, start);
+    padding: 26px @mobile-side-indent;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__title {
+    margin-right: auto;
+  }
+
+  &__address {
+    font-style: normal;
+    .flex-style(column, initial, initial, initial);
+  }
+}
