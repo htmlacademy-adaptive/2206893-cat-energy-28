@@ -1,15 +1,16 @@
 .main-header {
   position: relative;
-  padding: 10px @mobile-side-indent 17px @mobile-side-indent;
 
   &__logo-link {
+    padding: 10px @mobile-side-indent 17px @mobile-side-indent;
+    display: inline-flex;
     text-decoration: none;
   }
 
   &__text-mobile {
     position: absolute;
-    top: 50%;
+    top: 24px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
   }
 }
