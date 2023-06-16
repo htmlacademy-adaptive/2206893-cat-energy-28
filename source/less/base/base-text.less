@@ -4,6 +4,11 @@
   line-height: 36px;
   font-weight: 400;
   font-family: @title-font;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .secondary-title {
@@ -34,6 +39,10 @@
     @media (max-width: (@tablet-width - 0.02)) {
       font-size: 14px;
       line-height: 18px;
+    }
+
+    @media (min-width: @tablet-width) {
+      line-height: 26px;
     }
   }
 

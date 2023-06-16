@@ -5,6 +5,17 @@
     padding: 10px @mobile-side-indent 17px @mobile-side-indent;
     display: inline-flex;
     text-decoration: none;
+    width: calc(50% + 70px);
+
+    @media (min-width: @tablet-width) {
+      padding: 0 60px 2px 0;
+      width: auto;
+      margin-right: auto;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-bottom: 0;
+    }
   }
 
   &__text-mobile {
@@ -12,5 +23,14 @@
     top: 24px;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  @media (min-width: @tablet-width) {
+    .flex-style(initial, initial, initial, initial);
+    padding: 0 @tablet-side-indent;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 53px;
   }
 }
