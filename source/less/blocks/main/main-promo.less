@@ -25,17 +25,18 @@
     &::before {
       content: "";
       position: absolute;
-      width: 100vw;
-      height: calc(100% + 112px);
       top: -112px;
       left: 50%;
+      width: 100vw;
+      max-width: 1440px;
+      height: calc(100% + 112px);
       transform: translateX(-50%);
       background-image: linear-gradient(to right, @transparent 50%, rgba(104, 183, 56, 0.85) 50%),
         url("../../img/background/promo-cat-desktop.png"),
         linear-gradient(to right, @transparent 50%, rgba(69, 68, 72, 1) 50%);
-      background-position: left top, 50vw top, left top;
+      background-position: left bottom, calc(50% + 360px) bottom, left bottom;
       background-repeat: no-repeat;
-      background-size: 100vw 100%, contain, 100vw 100%;
+      background-size: 100%, contain, 100%;
       color: @base-text-color;
     }
   }
