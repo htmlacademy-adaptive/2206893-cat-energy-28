@@ -1,7 +1,7 @@
 .main-promo {
   position: relative;
   .flex-style(column, wrap, initial, center);
-  padding: 27px @mobile-side-indent @mobile-side-indent @mobile-side-indent;
+  padding: 27px @mobile-side-indent 0 @mobile-side-indent;
   text-align: center;
   background-image: linear-gradient(to bottom, rgba(104, 183, 56, 0.85) 302px, @transparent 195px),
     url("../../img/background/promo-cat-mobile.png"),
@@ -36,7 +36,7 @@
         linear-gradient(to right, @transparent 50%, rgba(69, 68, 72, 1) 50%);
       background-position: left bottom, calc(50% + 360px) bottom, left bottom;
       background-repeat: no-repeat;
-      background-size: 100%, contain, 100%;
+      background-size: 100%, 720px 694px, 100%;
       color: @base-text-color;
     }
   }
@@ -101,15 +101,14 @@
   }
 
   &__add-wrapper {
-    position: relative;
-
     @media (max-width: (@tablet-width - 0.02)) {
       &::before {
         content: "";
         position: absolute;
-        top: -27px;
-        left: -@mobile-side-indent;
+        top: 0;
+        left: 0;
         width: 100vw;
+        min-width: 320px;
         height: calc(100% - 255px);
         background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
           linear-gradient(rgba(69, 68, 72, 1), rgba(69, 68, 72, 1));

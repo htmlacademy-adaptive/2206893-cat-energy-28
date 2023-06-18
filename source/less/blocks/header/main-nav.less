@@ -97,7 +97,8 @@
       color: @base-text-color;
       border: none;
 
-      &--active::before {
+      &--active::before,
+      &--active-index::before {
         content: "";
         position: absolute;
         bottom: 2px;
@@ -110,11 +111,14 @@
 
     @media (min-width: @desktop-width) {
       padding: 0 0 13px 0;
-      color: @base-color;
       font-size: 20px;
       line-height: 30px;
 
-      &--active::before {
+      &--index {
+        color: @base-color;
+      }
+
+      &--active-index::before {
         background-color: @base-color;
       }
     }
@@ -126,9 +130,12 @@
     }
 
     .main-nav__list {
-      position: relative;
-      width: 100vw;
-      top: 0;
+      @media (max-width: (@tablet-width - 0.02)) {
+        position: relative;
+        width: 100vw;
+        min-width: 320px;
+        top: 0;
+      }
     }
   }
 }

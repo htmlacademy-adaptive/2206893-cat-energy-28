@@ -108,7 +108,7 @@
           <div class="program-selection__section program-selection__section--comment">
             <label class="program-selection__label">
               <span class="program-selection__title secondary-title">Комментарий</span>
-              <textarea class="program-selection__input program-selection__input--comment subtitle subtitle--form" id="comment" name="comment" value="Расскажите обо всех повадках кота"></textarea>
+              <textarea class="program-selection__input program-selection__input--comment subtitle subtitle--form" id="comment" name="comment">Расскажите обо всех повадках кота</textarea>
             </label>
           </div>
           <fieldset class="program-selection__section program-selection__section--filter-group">
@@ -151,28 +151,23 @@
     </main>
     <footer class="main-footer">
       <section class="footer-contacts">
-        <div class="container">
-          <div class="footer-contacts__text-container">
-            <h2 class="footer-contacts__title subtitle">Приглашаем к сотрудничеству дилеров!</h2>
-            <address class="footer-contacts__address">
-              <span class="footer-contacts__street text text--footer">ул. Большая Конюшенная, д. 19/8</span>
-              <span class="footer-contacts__city text text--footer">Санкт-Петербург</span>
-            </address>
-          </div>
-          <div class="footer-contacts__map">
-            <picture>
-              <source media="(min-width: 1320px)" srcset="img/products/map-desktop@1x.png 1x, img/products/map-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/map-tablet@1x.png 1x, img/map-tablet@2x.png 2x">
-              <img class="footer-contacts__map-image" src="img/map-mobile@1x.png" width="320" height="362" alt="Cat Energy на карте." srcset="img/map-mobile@2x.png 2x">
-            </picture>
-          </div>
+        <div class="footer-contacts__text-container">
+          <h2 class="footer-contacts__title subtitle">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
+          <address class="footer-contacts__address">
+            <span class="footer-contacts__street text text--footer">ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8</span>
+            <span class="footer-contacts__city text text--footer">Санкт-Петербург</span>
+          </address>
+        </div>
+        <div class="footer-contacts__map">
+          <picture>
+            <source media="(min-width: 1320px)" srcset="img/map-desktop@1x.png 1x, img/map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.png 1x, img/map-tablet@2x.png 2x">
+            <img class="footer-contacts__map-image" src="img/map-mobile@1x.png" width="320" height="362" alt="Cat Energy на карте." srcset="img/map-mobile@2x.png 2x">
+          </picture>
         </div>
       </section>
       <div class="footer-social container">
-        <a class="footer-social__logo-link" href="index.html">
-          <!-- Пока стоит лого как img, дальше будет переделано на маски -->
-          <img class="footer-icon" src="img/svg/cat-energy-logo-footer.svg" width="128" height="24" alt="Логотип магазина.">
-        </a>
+        <a class="footer-social__logo-link" href="index.html" aria-label="Перейти на главную страницу."></a>
         <ul class="footer-social__list">
           <li class="footer-social__item">
             <a class="footer-social__link footer-social__link--vkontakte" target="_blank" href="https://vk.com/htmlacademy">
@@ -192,8 +187,6 @@
         </ul>
         <a class="footer-social__copyright-link" target="_blank" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Страница курса HTML Academy">
           <span class="footer-social__copyright-text text">HTML Academy</span>
-          <!-- Пока стоит как svg, дальше будет переделано на маски -->
-          <svg class="footer-social__copyright-icon" xmlns="http://www.w3.org/2000/svg" width="27" height="34" viewBox="0 0 27 34" aria-hidden="true"><path fill="currentColor" d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z"/></svg>
         </a>
       </div>
     </footer>

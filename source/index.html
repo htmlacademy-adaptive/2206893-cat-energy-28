@@ -11,7 +11,7 @@
     <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="main-body">
-    <header class="main-header container">
+    <header class="main-header main-header--index container">
       <a class="main-header__logo-link active-link" href="#">
         <img class="main-header__icon-mobile only-mobile-show" src="img/svg/cat-energy-icon.svg" width="34" height="38" alt="Логотип-иконка магазина.">
         <img class="main-header__text-mobile only-mobile-show" src="img/svg/cat-energy-text.svg" width="101" height="18" alt="Логотип-надпись магазина.">
@@ -21,13 +21,13 @@
       <nav class="main-nav main-nav--nojs">
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--active" href="#">Главная</a>
+            <a class="main-nav__link main-nav__link--index main-nav__link--active-index" href="#">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+            <a class="main-nav__link main-nav__link--index" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">Подбор программы</a>
+            <a class="main-nav__link main-nav__link--index" href="form.html">Подбор программы</a>
           </li>
         </ul>
         <button class="main-nav__toggle" type="button">
@@ -52,16 +52,16 @@
         <h2 class="visually-hidden">Виды программ питания</h2>
         <ul class="program-type__list">
           <li class="program-type__item">
-            <div class="program-type__img-wrapper">
-              <img class="program-type__img" src="img/svg/cat-slim.svg" width="36" height="50" alt="Силуэт худого кота.">
+            <div class="program-type__icon program-type__icon--slim">
+              <span class="visually-hidden">Силуэт худого кота.</span>
             </div>
             <h3 class="program-type__title secondary-title">Похудение</h3>
             <p class="program-type__text text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
             <a class="program-type__link subtitle" href="#">Каталог slim</a>
           </li>
           <li class="program-type__item">
-            <div class="program-type__img-wrapper">
-              <img class="program-type__img" src="img/svg/cat-pro.svg" width="67" height="28" alt="Силуэт мускулистого кота.">
+            <div class="program-type__icon program-type__icon--pro">
+              <span class="visually-hidden">Силуэт мускулистого кота.</span>
             </div>
             <h3 class="program-type__title secondary-title">Набор массы</h3>
             <p class="program-type__text text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
@@ -81,26 +81,28 @@
           <li class="work-description__item work-description__item--replace">
             <p class="work-description__text text">Замените один-два приема обычной еды на наше функциональное питание.</p>
           </li>
-          <li class="work-description__item work-description__item--time">
+          <li class="work-description__item work-description__item--result">
             <p class="work-description__text text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
           </li>
         </ul>
       </section>
       <section class="promo-example">
         <div class="container">
-          <h2 class="promo-example__title title">Живой пример</h2>
-          <p class="promo-example__text text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <dl class="promo-example__list-description">
-            <div class="promo-example__item-description">
-              <dt class="promo-example__description">снижение веса</dt>
-              <dd class="promo-example__description-detals secondary-title">5 КГ</dd>
-            </div>
-            <div class="promo-example__item-description">
-              <dt class="promo-example__description">затрачено времени</dt>
-              <dd class="promo-example__description-detals secondary-title">60 ДНЕЙ</dd>
-            </div>
-          </dl>
-          <p class="promo-example__costs">Затраты на питание: <span class="promo-example__costs-numbers">15 000 РУБ.</span></p>
+          <div class="promo-example__text-wrapper">
+            <h2 class="promo-example__title title">Живой пример</h2>
+            <p class="promo-example__text text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <dl class="promo-example__list-description">
+              <div class="promo-example__item-description">
+                <dt class="promo-example__description">снижение<span class="mobile-br"></span> веса</dt>
+                <dd class="promo-example__description-detals secondary-title">5 КГ</dd>
+              </div>
+              <div class="promo-example__item-description">
+                <dt class="promo-example__description">затрачено<span class="mobile-br"></span> времени</dt>
+                <dd class="promo-example__description-detals secondary-title">60 ДНЕЙ</dd>
+              </div>
+            </dl>
+            <p class="promo-example__costs">Затраты на питание: <span class="promo-example__costs-numbers">15 000 РУБ.</span></p>
+          </div>
           <div class="promo-example__slider slider">
             <div class="slider__before">
               <picture>
@@ -118,6 +120,7 @@
               <button class="slider__position-button" type="button">
                 <span class="visually-hidden">Изменить соотношение изображений до/после похудения.</span>
               </button>
+              <span class="slider__line"></span>
             </div>
           </div>
         </div>
@@ -125,28 +128,23 @@
     </main>
     <footer class="main-footer">
       <section class="footer-contacts footer-contacts--main-page">
-        <div class="container">
-          <div class="footer-contacts__text-container">
-            <h2 class="footer-contacts__title subtitle">Приглашаем к сотрудничеству дилеров!</h2>
-            <address class="footer-contacts__address">
-              <span class="footer-contacts__street text text--footer">ул. Большая Конюшенная, д.&nbsp;19/8</span>
-              <span class="footer-contacts__city text text--footer">Санкт-Петербург</span>
-            </address>
-          </div>
-          <div class="footer-contacts__map">
-            <picture>
-              <source media="(min-width: 1320px)" srcset="img/products/map-desktop@1x.png 1x, img/products/map-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/map-tablet@1x.png 1x, img/map-tablet@2x.png 2x">
-              <img class="footer-contacts__map-image" src="img/map-mobile@1x.png" width="320" height="362" alt="Cat Energy на карте." srcset="img/map-mobile@2x.png 2x">
-            </picture>
-          </div>
+        <div class="footer-contacts__text-container">
+          <h2 class="footer-contacts__title subtitle">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
+          <address class="footer-contacts__address">
+            <span class="footer-contacts__street text text--footer">ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8</span>
+            <span class="footer-contacts__city text text--footer">Санкт-Петербург</span>
+          </address>
+        </div>
+        <div class="footer-contacts__map">
+          <picture>
+            <source media="(min-width: 1320px)" srcset="img/map-desktop@1x.png 1x, img/map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.png 1x, img/map-tablet@2x.png 2x">
+            <img class="footer-contacts__map-image" src="img/map-mobile@1x.png" width="320" height="362" alt="Cat Energy на карте." srcset="img/map-mobile@2x.png 2x">
+          </picture>
         </div>
       </section>
       <div class="footer-social container">
-        <a class="footer-social__logo-link active-link" href="#">
-          <!-- Пока стоит лого как img, дальше будет переделано на маски -->
-          <img class="footer-icon" src="img/svg/cat-energy-logo-footer.svg" width="128" height="24" alt="Логотип магазина.">
-        </a>
+        <a class="footer-social__logo-link active-link" href="#" aria-label="Текстовый логотип магазина."></a>
         <ul class="footer-social__list">
           <li class="footer-social__item">
             <a class="footer-social__link footer-social__link--vkontakte" target="_blank" href="https://vk.com/htmlacademy">
@@ -164,10 +162,8 @@
             </a>
           </li>
         </ul>
-        <a class="footer-social__copyright-link" target="_blank" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Страница курса HTML Academy">
+        <a class="footer-social__copyright-link" target="_blank" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Страница курса HTML Academy.">
           <span class="footer-social__copyright-text text">HTML Academy</span>
-          <!-- Пока стоит как svg, дальше будет переделано на маски -->
-          <svg class="footer-social__copyright-icon" xmlns="http://www.w3.org/2000/svg" width="27" height="34" viewBox="0 0 27 34" aria-hidden="true"><path fill="currentColor" d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z"/></svg>
         </a>
       </div>
     </footer>

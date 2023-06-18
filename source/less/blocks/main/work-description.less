@@ -1,0 +1,36 @@
+.work-description {
+  padding: 0 @mobile-side-indent 52px @mobile-side-indent;
+  .flex-style(column, initial, 40px, initial);
+
+  &__title {
+    line-height: 40px;
+  }
+
+  &__list {
+    .list-reset();
+    .grid-style(@mobile-side-indent, initial);
+  }
+
+  &__item {
+    padding: 2px 0 0 81px;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 60px;
+
+    &--healthy {
+      background-image: url("../../img/svg/healthy.svg");
+    }
+
+    &--fast {
+      background-image: url("../../img/svg/fast.svg");
+    }
+
+    &--replace {
+      background-image: url("../../img/svg/replace.svg");
+    }
+
+    &--result {
+      background-image: url("../../img/svg/result.svg");
+    }
+  }
+}
