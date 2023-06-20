@@ -9,13 +9,23 @@
     <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png"><!-- 180×180 -->
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/lato/Lato-Regular.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" type="font/woff2" as="font">
   </head>
   <body class="main-body">
     <header class="main-header main-header--index container">
       <a class="main-header__logo-link active-link" href="#">
-        <img class="main-header__icon-mobile only-mobile-show" src="img/svg/cat-energy-icon.svg" width="34" height="38" alt="Логотип-иконка магазина.">
-        <img class="main-header__text-mobile only-mobile-show" src="img/svg/cat-energy-text.svg" width="101" height="18" alt="Логотип-надпись магазина.">
-        <img class="main-header__not-mobile not-mobile-show" src="img/svg/cat-energy-logo-tablet.svg" width="174" height="52" alt="Логотип магазина.">
+        <picture>
+          <source media="(min-width: 1320px)" srcset="img/svg/cat-energy-icon-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/svg/cat-energy-icon-tablet.svg">
+          <img class="main-header__icon" src="img/svg/cat-energy-icon-mobile.svg" width="34" height="38" alt="Логотип-иконка магазина.">
+        </picture>
+        <picture>
+          <source media="(min-width: 1320px)" srcset="img/svg/cat-energy-text-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/svg/cat-energy-text-tablet.svg">
+          <img class="main-header__text-mobile" src="img/svg/cat-energy-text-mobile.svg" width="101" height="18" alt="Логотип-надпись магазина.">
+        </picture>
       </a>
       <!-- Класс main-nav--nojs стоит при отключенном js и при включении js он автоматически удаляется, а класс main-nav--hidden используется для скрытия навигации при активном js -->
       <nav class="main-nav main-nav--nojs">
