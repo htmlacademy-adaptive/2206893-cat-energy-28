@@ -1,0 +1,222 @@
+.program-selection {
+  border-top: 1px solid @border-color;
+  padding: 27px @mobile-side-indent 32px @mobile-side-indent;
+}
+
+.program-selection__title {
+  margin-bottom: 37px;
+}
+
+.program-selection__form {
+  .flex-style(column, wrap, initial, initial);
+}
+
+.program-selection__section {
+  .indent-reset();
+  .flex-style(column, wrap, initial, initial);
+  position: relative;
+  border: none;
+
+  &--cat-presentation {
+    padding-bottom: 24px;
+    gap: 39px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -@mobile-side-indent;
+      width: calc(100% + 2 * @mobile-side-indent);
+      height: 1px;
+      background-color: @border-color;
+    }
+  }
+
+  &--wish {
+    padding: 22px 0 19px 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: -@mobile-side-indent;
+      width: calc(100% + 2 * @mobile-side-indent);
+      height: 1px;
+      background-color: @border-color;
+    }
+  }
+
+  &--owner-presentation {
+    padding: 26px 0 23px 0;
+    gap: 35px;
+  }
+
+  &--comment {
+    margin-bottom: 23px;
+  }
+
+  &--extra {
+    margin-bottom: 34px;
+  }
+}
+
+.program-selection__list {
+  .list-reset();
+  .grid-style(14px, initial);
+
+  &--extra {
+    margin-top: 34px;
+  }
+}
+
+.program-selection__label {
+  .grid-style(10px, center);
+  grid-template-columns: auto 1fr;
+  position: relative;
+
+  &--email::before,
+  &--telephone::before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+    mask-repeat: no-repeat;
+    background-color: @base-text-color;
+  }
+
+  &--email::before {
+    mask-image: url("../../img/svg/email.svg");
+  }
+
+  &--telephone::before {
+    mask-image: url("../../img/svg/telephone.svg");
+  }
+}
+
+.program-selection__label-comment {
+  .flex-style(column, initial, 38px, initial);
+}
+
+.program-selection__control {
+  padding: 6px 0 6px 45px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.program-selection__control-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #cdcdcd;
+}
+
+.program-selection__control-input[type="checkbox"]:checked + .program-selection__control-mark::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 26px;
+  height: 26px;
+  background-image: url("../../img/svg/checkbox.svg");
+  transform: translate(-50%, -50%);
+}
+
+.program-selection__control-input[type="radio"] + .program-selection__control-mark {
+  border-radius: 50%;
+}
+
+.program-selection__control-input[type="radio"]:checked + .program-selection__control-mark::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 13px;
+  height: 13px;
+  background-color: @button-color;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.program-selection__section-title {
+  position: relative;
+  padding-right: 22px;
+  align-self: start;
+  max-width: calc(100% - 2 * @mobile-side-indent);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: -@mobile-side-indent;
+    width: 100vw;
+    min-width: 320px;
+    height: 2px;
+    background-color: @button-color;
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -@mobile-side-indent;
+    width: calc(100% + @mobile-side-indent);
+    height: 100%;
+    background-color: @base-color;
+    z-index: -1;
+  }
+}
+
+.program-selection__section-title-cat {
+  .indent-reset();
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  font-family: @title-font;
+  text-transform: uppercase;
+  color: @base-text-color;
+}
+
+.program-selection__input {
+  padding: 13px 19px 12px 19px;
+  color: @secondary-text-color;
+  border: 1px solid @secondary-border-color;
+  text-transform: uppercase;
+
+  &::placeholder {
+    opacity: 0.6;
+  }
+
+  &--age {
+    max-width: 173px;
+  }
+
+  &--owner {
+    padding: 13px 45px 12px 14px;
+  }
+
+  &--comment {
+    width: 100%;
+    padding: 9px 11px 13px 14px;
+    resize: none;
+  }
+}
+
+.program-selection__submit-button {
+  padding: 10px @mobile-side-indent;
+  margin-bottom: 21px;
+}
+
+.program-selection__footnote {
+  align-self: center;
+  line-height: 16px;
+  color: @base-text-color;
+}

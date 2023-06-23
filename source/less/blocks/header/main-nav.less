@@ -1,0 +1,141 @@
+.main-nav {
+  @media (max-width: (@tablet-width - 0.02)) {
+    &--hidden .main-nav__list {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 50%;
+    padding-left: @tablet-side-indent;
+    position: relative;
+  }
+
+  &--nojs {
+    .main-nav__toggle {
+      display: none;
+    }
+
+    .main-nav__list {
+      @media (max-width: (@tablet-width - 0.02)) {
+        position: relative;
+        width: 100vw;
+        min-width: 320px;
+        top: 0;
+      }
+    }
+  }
+
+  &--hidden .main-nav__toggle {
+    background-image: url("../../img/svg/icon-menu.svg");
+    width: 24px;
+    height: 18px;
+    right: 20px;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  padding: 0;
+  top: 22px;
+  right: 18px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: @transparent;
+  background-image: url("../../img/svg/icon-menu-close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 3;
+  .pointer();
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__list {
+  .list-reset();
+  position: absolute;
+  .flex-style(column, wrap, initial, initial);
+  background-color: @base-color;
+  top: 65px;
+  right: 0;
+  border-top: 1px solid #e6e6e6;
+  width: 100%;
+  text-align: center;
+
+  @media (max-width: (@tablet-width - 0.02)) {
+    z-index: 2;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: @transparent;
+    top: 0;
+    width: auto;
+    gap: 0 35px;
+    border: none;
+    z-index: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 6px;
+  }
+}
+
+.main-nav__item {
+  position: relative;
+}
+
+.main-nav__link {
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  padding: 22px 60px 23px 60px;
+  font-family: @title-font;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 500;
+  border-bottom: 1px solid #e6e6e6;
+  color: @base-text-color;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding: 18px 0 12px 0;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    color: @base-text-color;
+    border: none;
+
+    &--active::before,
+    &--active-index::before {
+      content: "";
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: @button-color;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 10px 0 13px 0;
+    font-size: 20px;
+    line-height: 30px;
+
+    &--index {
+      color: @base-color;
+    }
+
+    &--active-index::before {
+      background-color: @base-color;
+    }
+  }
+}

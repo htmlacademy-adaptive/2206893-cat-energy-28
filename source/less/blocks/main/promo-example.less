@@ -1,0 +1,78 @@
+.promo-example {
+  background-color: @secondary-color;
+  padding-bottom: 40px;
+}
+
+.promo-example__text-wrapper {
+  .flex-style(column, wrap, @mobile-side-indent, initial);
+  padding: 25px @mobile-side-indent @mobile-side-indent @mobile-side-indent;
+}
+
+.promo-example__title {
+  margin-bottom: @mobile-side-indent;
+  line-height: 40px;
+}
+
+.promo-example__list-description {
+  .list-reset();
+  .grid-style(32px, initial);
+  margin: 0 auto;
+  grid-template-columns: 124px 124px;
+}
+
+.promo-example__item-description {
+  .flex-style(column, wrap, initial, initial);
+  text-align: center;
+}
+
+.promo-example__description {
+  position: relative;
+  padding: 0 5px;
+  align-self: center;
+  max-width: 87px;
+  font-family: @text-font;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  order: 1;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 87px;
+    height: 19px;
+    background-color: @secondary-color;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+}
+
+.promo-example__description-detals {
+  position: relative;
+  padding: 14px 0 8px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 9px);
+    border: 1px solid #cdcdcd;
+    border-radius: 3px;
+  }
+}
+
+.promo-example__costs {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.promo-example__slider {
+  padding: 0 @mobile-side-indent 0 @mobile-side-indent;
+  width: 320px;
+  margin: 0 auto;
+}
