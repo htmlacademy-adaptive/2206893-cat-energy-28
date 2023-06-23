@@ -49,6 +49,11 @@ img {
   pointer-events: none;
 }
 
+.invisible-br::after {
+  content: "\A";
+  white-space: pre;
+}
+
 @media (max-width: (@tablet-width - 0.02)) {
   .mobile-br::after {
     content: "\A";

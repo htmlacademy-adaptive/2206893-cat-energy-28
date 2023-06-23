@@ -49,8 +49,8 @@
       <section class="program-selection container">
         <h1 class="program-selection__title title">Подбор программы</h1>
         <form class="program-selection__form" action="https://echo.htmlacademy.ru/" method="post">
-          <div class="program-selection program-selection--presentation">
-            <h2 class="program-selection__presentation-title">Заполните анкету, и мы подберем программу питания для вашего кота</h2>
+          <div class="program-selection__section program-selection__section--cat-presentation">
+            <h2 class="program-selection__section-title-cat">Заполните анкету, и мы подберем <span class="invisible-br"></span>программу питания для вашего кота</h2>
             <ul class="program-selection__list">
               <li class="program-selection__item">
                 <label class="program-selection__label">
@@ -67,12 +67,12 @@
               <li class="program-selection__item">
                 <label class="program-selection__label">
                   <span class="program-selection__label-text subtitle subtitle--form">Возраст (лет):</span>
-                  <input class="program-selection__input subtitle subtitle--form" type="number" value="7" placeholder="Введите возраст" name="age">
+                  <input class="program-selection__input program-selection__input--age subtitle subtitle--form" type="number" value="7" placeholder="Введите возраст" name="age">
                 </label>
               </li>
             </ul>
           </div>
-          <fieldset class="program-selection__section program-selection__section--filter-group">
+          <fieldset class="program-selection__section program-selection__section--wish">
             <legend class="visually-hidden">Пожелания к типу программы</legend>
             <ul class="program-selection__list program-selection__list--programs">
               <li class="program-selection__item">
@@ -98,31 +98,31 @@
               </li>
             </ul>
           </fieldset>
-          <div class="program-selection program-selection--presentation">
-            <h2 class="program-selection__title secondary-title">Контактные данные (владельца кота)</h2>
+          <div class="program-selection__section program-selection__section--owner-presentation">
+            <h2 class="program-selection__section-title secondary-title">Контактные данные <span class="mobile-br"></span>(владельца кота)</h2>
             <ul class="program-selection__list">
               <li class="program-selection__item">
-                <label class="program-selection__label">
+                <label class="program-selection__label program-selection__label--email">
                   <span class="program-selection__label-text subtitle subtitle--form">E-mail:*</span>
-                  <input class="program-selection__input subtitle subtitle--form" type="email" value="kuklachev@gmail.com" placeholder="Ваша почта" name="email" required>
+                  <input class="program-selection__input program-selection__input--owner subtitle subtitle--form" type="email" value="kuklachev@gmail.com" placeholder="Ваша почта" name="email" required>
                 </label>
               </li>
               <li class="program-selection__item">
-                <label class="program-selection__label">
+                <label class="program-selection__label program-selection__label--telephone">
                   <span class="program-selection__label-text subtitle subtitle--form">Телефон:*</span>
-                  <input class="program-selection__input subtitle subtitle--form" type="tel" value="8 (960) 900-60-90" placeholder="Ваш номер" name="telephone" pattern="\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" required>
+                  <input class="program-selection__input program-selection__input--owner subtitle subtitle--form" type="tel" value="8 (960) 900-60-90" placeholder="Ваш номер" name="telephone" pattern="\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" required>
                 </label>
               </li>
             </ul>
           </div>
           <div class="program-selection__section program-selection__section--comment">
-            <label class="program-selection__label">
-              <span class="program-selection__title secondary-title">Комментарий</span>
-              <textarea class="program-selection__input program-selection__input--comment subtitle subtitle--form" id="comment" name="comment">Расскажите обо всех повадках кота</textarea>
+            <label class="program-selection__label-comment">
+              <span class="program-selection__section-title secondary-title">Комментарий</span>
+              <textarea class="program-selection__input program-selection__input--comment subtitle subtitle--form" rows="7" id="comment" name="comment" placeholder="Напишите нам о вашем коте то, что считаете нужным">Расскажите обо всех повадках кота</textarea>
             </label>
           </div>
-          <fieldset class="program-selection__section program-selection__section--filter-group">
-            <legend class="program-selection__title secondary-title">Дополнительно</legend>
+          <fieldset class="program-selection__section program-selection__section--extra">
+            <legend class="program-selection__section-title secondary-title">Дополнительно</legend>
             <ul class="program-selection__list program-selection__list--extra">
               <li class="program-selection__item">
                 <label class="program-selection__control">

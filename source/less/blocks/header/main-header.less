@@ -1,6 +1,11 @@
 .main-header {
   position: relative;
 
+  @media (max-width: (@tablet-width - 0.02)) {
+    background-color: @base-color;
+    z-index: 1;
+  }
+
   @media (min-width: @tablet-width) {
     .flex-style(initial, initial, initial, flex-start);
     padding: 0 @tablet-side-indent;

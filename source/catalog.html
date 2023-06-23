@@ -15,16 +15,18 @@
   </head>
   <body class="main-body">
     <header class="main-header container">
-      <picture>
-        <source media="(min-width: 1320px)" srcset="img/svg/cat-energy-icon-desktop.svg">
-        <source media="(min-width: 768px)" srcset="img/svg/cat-energy-icon-tablet.svg">
-        <img class="main-header__icon" src="img/svg/cat-energy-icon-mobile.svg" width="34" height="38" alt="Логотип-иконка магазина.">
-      </picture>
-      <picture>
-        <source media="(min-width: 1320px)" srcset="img/svg/cat-energy-text-desktop.svg">
-        <source media="(min-width: 768px)" srcset="img/svg/cat-energy-text-tablet.svg">
-        <img class="main-header__text-mobile" src="img/svg/cat-energy-text-mobile.svg" width="101" height="18" alt="Логотип-надпись магазина.">
-      </picture>
+      <a class="main-header__logo-link" href="index.html">
+        <picture>
+          <source media="(min-width: 1320px)" srcset="img/svg/cat-energy-icon-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/svg/cat-energy-icon-tablet.svg">
+          <img class="main-header__icon" src="img/svg/cat-energy-icon-mobile.svg" width="34" height="38" alt="Логотип-иконка магазина.">
+        </picture>
+        <picture>
+          <source media="(min-width: 1320px)" srcset="img/svg/cat-energy-text-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/svg/cat-energy-text-tablet.svg">
+          <img class="main-header__text-mobile" src="img/svg/cat-energy-text-mobile.svg" width="101" height="18" alt="Логотип-надпись магазина.">
+        </picture>
+      </a>
       <!-- Класс main-nav--nojs стоит при отключенном js и при включении js он автоматически удаляется, а класс main-nav--hidden используется для скрытия навигации при активном js -->
       <nav class="main-nav main-nav--nojs">
         <ul class="main-nav__list">
