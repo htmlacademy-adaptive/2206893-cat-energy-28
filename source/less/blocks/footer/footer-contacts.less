@@ -8,25 +8,25 @@
   @media (min-width: @desktop-width) {
     max-width: 1440px;
     margin: 0 auto;
+    padding: 95px 110px;
+    min-height: 400px;
   }
 }
 
 .footer-contacts__text-container {
   .flex-style(initial, initial, initial, initial);
   padding: 26px @mobile-side-indent;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     padding: 56px 70px;
   }
 
   @media (min-width: @desktop-width) {
-    position: absolute;
-    top: 95px;
-    left: 110px;
-    padding-left: 56px 60px 56px 80px;
+    padding: 56px 60px 56px 80px;
     width: 565px;
-    z-index: 1;
     background-color: @base-color;
+    z-index: 1;
   }
 }
 
@@ -59,6 +59,16 @@
 .footer-contacts__street {
   @media (min-width: @tablet-width) {
     margin-bottom: 20px;
+  }
+}
+
+.footer-contacts__map {
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    height: 100%;
   }
 }
 
