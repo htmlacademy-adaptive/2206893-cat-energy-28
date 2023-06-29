@@ -255,14 +255,6 @@
   mask-image: url("../../img/svg/telephone.svg");
 }
 
-.program-selection__label-text {
-  @media (max-width: (@tablet-width - 0.02)) {
-    &--age {
-      letter-spacing: -0.4px;
-    }
-  }
-}
-
 .program-selection__label-comment {
   .flex-style(column, initial, 38px, initial);
 
@@ -383,6 +375,7 @@
   color: @secondary-text-color;
   border: 1px solid @secondary-border-color;
   align-self: start;
+  overflow: hidden;
 
   &::placeholder {
     opacity: 0.6;
@@ -394,6 +387,7 @@
 
   &--owner {
     padding: 13px 45px 12px 14px;
+    max-width: calc(100vw - 2 * @mobile-side-indent - 60px);
 
     @media (min-width: @tablet-width) {
       padding: 10px 45px 10px 19px;

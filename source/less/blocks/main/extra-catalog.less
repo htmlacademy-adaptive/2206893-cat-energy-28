@@ -1,5 +1,5 @@
 .extra-catalog {
-  .grid-style(initial, 35px);
+  .grid-style(35px, initial);
   padding: 25px @mobile-side-indent 35px @mobile-side-indent;
 
   @media (min-width: @tablet-width) {
@@ -48,7 +48,8 @@
     }
 
     @media (min-width: @desktop-width) {
-      background-color: transparent;
+      background-color: @transparent;
+      width: 0;
     }
   }
 
