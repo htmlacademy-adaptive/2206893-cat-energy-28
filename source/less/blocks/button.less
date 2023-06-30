@@ -8,6 +8,22 @@
   border: none;
   .pointer();
 
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    background-color: #5eaa2f;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:focus-visible {
+    background-color: #5eaa2f;
+    color: rgba(255, 255, 255, 0.6);
+    outline-offset: -2px;
+    outline: 2px solid @icon-color;
+  }
+
   @media (min-width: @tablet-width) {
     width: auto;
   }

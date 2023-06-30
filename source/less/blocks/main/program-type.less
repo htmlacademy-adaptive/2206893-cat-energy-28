@@ -176,4 +176,22 @@
   @media (min-width: @tablet-width) {
     padding-right: 58px;
   }
+
+  &:hover {
+    background-position: right center, right 6px center;
+    background-size: 9px 12px, 26px 2px;
+  }
+
+  &:active {
+    background-position: right center, right 6px center;
+    background-size: 9px 12px, 26px 2px;
+    opacity: 0.3;
+  }
+
+  &:focus-visible {
+    opacity: 0.3;
+    outline: 2px solid @base-text-color;
+    background-position: right center, right 6px center;
+    background-size: 9px 12px, 26px 2px;
+  }
 }
