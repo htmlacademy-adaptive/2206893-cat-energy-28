@@ -27,7 +27,7 @@
   }
 
   &--hidden .main-nav__toggle {
-    background-image: url("../../img/svg/sprite.svg#icon-menu");
+    mask-image: url("../../img/svg/sprite.svg#icon-menu");
     width: 24px;
     height: 18px;
     right: 20px;
@@ -42,12 +42,26 @@
   width: 20px;
   height: 20px;
   border: none;
-  background-color: @transparent;
-  background-image: url("../../img/svg/sprite.svg#icon-menu-close");
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: @base-text-color;
+  mask-image: url("../../img/svg/sprite.svg#icon-menu-close");
+  mask-repeat: no-repeat;
+  mask-position: center;
   z-index: 3;
   .pointer();
+
+  &:hover {
+    background-color: @button-color;
+  }
+
+  &:active {
+    background-color: @button-color;
+    opacity: 0.3;
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: @button-color;
+  }
 
   @media (min-width: @tablet-width) {
     display: none;

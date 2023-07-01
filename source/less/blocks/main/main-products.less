@@ -67,6 +67,42 @@
 
 .main-products__image-link {
   text-transform: none;
+  position: relative;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:focus-visible {
+    outline: none;
+    opacity: 0.6;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 15px;
+      height: 100%;
+      width: calc(100% - 30px);
+      border-radius: 0;
+      border: 2px solid @button-color;
+
+      @media (min-width: @tablet-width) {
+        top: -5px;
+        left: -10px;
+        height: calc(100% + 10px);
+        width: calc(100% + 20px);
+      }
+
+      @media (min-width: @desktop-width) {
+        height: calc(100% + 5px);
+      }
+    }
+  }
 
   @media (min-width: @tablet-width) {
     align-self: center;
@@ -75,6 +111,18 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 13px;
+  }
+}
+
+.main-products__img {
+  @media (min-width: @tablet-width) {
+    width: 168px;
+    height: 200px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 172px;
+    height: 196px;
   }
 }
 
@@ -92,16 +140,29 @@
   text-decoration: none;
   color: #222222;
   text-transform: uppercase;
+  align-self: start;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:focus-visible {
+    opacity: 0.3;
+    outline: 2px solid @base-text-color;
+  }
 
   @media (min-width: @tablet-width) {
     align-self: center;
     text-align: center;
-    padding: 0 41px;
-    margin-bottom: auto;
+    margin: 0 46px auto 46px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 20px;
+    margin: 0 20px auto 20px;
   }
 }
 
@@ -243,6 +304,21 @@
 .main-products__show-more-button {
   background-color: @secondary-color;
   color: @secondary-text-color;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    background-color: #ebebeb;
+    color: rgba(68, 68, 68, 0.3);
+  }
+
+  &:focus-visible {
+    background-color: #ebebeb;
+    color: @secondary-text-color;
+    outline: 2px solid rgba(0, 0, 0, 0.3);
+  }
 
   @media (min-width: @tablet-width) {
     margin: auto 0 0 0;

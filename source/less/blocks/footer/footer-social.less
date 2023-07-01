@@ -21,6 +21,7 @@
 }
 
 .footer-social__logo-link {
+  position: relative;
   background-color: #111111;
   height: 24px;
   mask-repeat: no-repeat;
@@ -32,6 +33,19 @@
     mask-position: left center;
     height: 37px;
     mask-size: 143px 26px;
+  }
+
+  &:hover {
+    background-color: #3e3e3e;
+  }
+
+  &:active {
+    background-color: #6b6b6b;
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: #3e3e3e;
   }
 }
 
@@ -71,6 +85,20 @@
   mask-position: center;
   mask-size: 28px 22px;
 
+  &:hover {
+    background-color: @button-color;
+  }
+
+  &:active {
+    background-color: @button-color;
+    opacity: 0.3;
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: @button-color;
+  }
+
   &--vkontakte {
     mask-image: url("../../img/svg/sprite.svg#vk");
   }
@@ -106,6 +134,26 @@
     mask-repeat: no-repeat;
     mask-image: url("../../img/svg/sprite.svg#html-academy");
     transform: translateY(-50%);
+  }
+
+  &:hover::before {
+    background-color: @button-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:active::before {
+    background-color: @button-color;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:focus-visible::before {
+    background-color: @button-color;
   }
 
   @media (min-width: @tablet-width) {
