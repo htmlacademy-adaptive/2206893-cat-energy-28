@@ -282,7 +282,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #cdcdcd;
+  border: 1px solid @border-hover-color;
   cursor: pointer;
 
   @media (min-width: @tablet-width) {
@@ -324,6 +324,35 @@
   @media (min-width: @tablet-width) {
     width: 18px;
     height: 18px;
+  }
+}
+
+.program-selection__control-input {
+  &:hover + .program-selection__control-mark {
+    border-color: #bababa;
+  }
+
+  &:active + .program-selection__control-mark {
+    border-color: @secondary-text-color;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:focus-visible + .program-selection__control-mark {
+    border-color: @transparent;
+    outline: 2px solid @secondary-text-color;
+  }
+
+  &:disabled + .program-selection__control-mark {
+    opacity: 0.3;
+    border-color: #bababa;
+    pointer-events: none;
+  }
+
+  &:disabled ~ .program-selection__control-text {
+    opacity: 0.3;
   }
 }
 
@@ -379,6 +408,48 @@
 
   &::placeholder {
     opacity: 0.6;
+  }
+
+  &:hover {
+    border-color: @border-hover-color;
+  }
+
+  &:active {
+    border-color: @secondary-text-color;
+  }
+
+  &:active + .program-selection__icon-email,
+  &:active + .program-selection__icon-telephone {
+    background-color: @button-color;
+  }
+
+  &:focus-visible {
+    border-color: @transparent;
+    outline: 2px solid @secondary-text-color;
+  }
+
+  &:focus-visible + .program-selection__icon-email,
+  &:focus-visible + .program-selection__icon-telephone {
+    background-color: @button-color;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  &:disabled:hover,
+  &:disabled:active {
+    border: 1px solid @secondary-border-color;
+  }
+
+  &--error {
+    border-color: @transparent;
+    outline: 2px solid #ff8282;
+  }
+
+  &--error + .program-selection__icon-email,
+  &--error + .program-selection__icon-telephone {
+    background-color: #ff8282;
   }
 
   @media (min-width: @tablet-width) {

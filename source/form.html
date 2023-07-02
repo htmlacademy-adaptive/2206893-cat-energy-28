@@ -55,12 +55,14 @@
               <li class="program-selection__item">
                 <label class="program-selection__label">
                   <span class="program-selection__label-text subtitle subtitle--form">ИМЯ:*</span>
+                  <!-- В случае ошибки к input добавляется класс-модификатор program-selection__input--error -->
                   <input class="program-selection__input subtitle subtitle--form" type="text" value="барсик" minlength="2" placeholder="Имя кота" name="name" required>
                 </label>
               </li>
               <li class="program-selection__item">
                 <label class="program-selection__label">
                   <span class="program-selection__label-text subtitle subtitle--form">Вес (кг):*</span>
+                  <!-- В случае ошибки к input добавляется класс-модификатор program-selection__input--error -->
                   <input class="program-selection__input subtitle subtitle--form" type="number" value="7" placeholder="Вес кота" name="weight" min="1" required>
                 </label>
               </li>
@@ -104,6 +106,7 @@
               <li class="program-selection__item">
                 <label class="program-selection__label program-selection__label--owner">
                   <span class="program-selection__label-text subtitle subtitle--form">E-mail:*</span>
+                  <!-- В случае ошибки к input добавляется класс-модификатор program-selection__input--error -->
                   <input class="program-selection__input program-selection__input--owner subtitle subtitle--form" type="email" value="kuklachev@gmail.com" placeholder="Ваша почта" name="email" required>
                   <span class="program-selection__icon-email"></span>
                 </label>
@@ -111,6 +114,7 @@
               <li class="program-selection__item">
                 <label class="program-selection__label program-selection__label--owner">
                   <span class="program-selection__label-text subtitle subtitle--form">Телефон:*</span>
+                  <!-- В случае ошибки к input добавляется класс-модификатор program-selection__input--error -->
                   <input class="program-selection__input program-selection__input--owner subtitle subtitle--form" type="tel" value="8 (960) 900-60-90" placeholder="Ваш номер" name="telephone" pattern="\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" required>
                   <span class="program-selection__icon-telephone"></span>
                 </label>
@@ -120,7 +124,7 @@
           <div class="program-selection__section program-selection__section--comment">
             <label class="program-selection__label-comment">
               <span class="program-selection__section-title secondary-title">Комментарий</span>
-              <textarea class="program-selection__input program-selection__input--comment subtitle subtitle--form" id="comment" name="comment" placeholder="Напишите нам о вашем коте то, что считаете нужным">Расскажите обо всех повадках кота</textarea>
+              <textarea class="program-selection__input program-selection__input--comment disabled subtitle subtitle--form" id="comment" name="comment" placeholder="Напишите нам о вашем коте то, что считаете нужным">Расскажите обо всех повадках кота</textarea>
             </label>
           </div>
           <fieldset class="program-selection__section program-selection__section--extra">
@@ -156,6 +160,7 @@
               </li>
             </ul>
           </fieldset>
+          <!-- Необходимо на js реализовать проверку, чтобы данные всех полей сразу при проверке не соответствовали дефолтным введенным значениям согласно макету, в противном случае выводить окно ошибки -->
           <button class="program-selection__submit-button subtitle button" type="submit">Отправить заявку</button>
           <span class="program-selection__footnote text">* — Обязательные поля</span>
         </form>
@@ -171,11 +176,14 @@
           </address>
         </div>
         <div class="footer-contacts__map">
-          <picture>
-            <source media="(min-width: 1320px)" srcset="img/map-desktop@1x.png 1x, img/map-desktop@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.png 1x, img/map-tablet@2x.png 2x">
-            <img class="footer-contacts__map-image" src="img/map-mobile@1x.png" width="320" height="362" alt="Cat Energy на карте." srcset="img/map-mobile@2x.png 2x">
-          </picture>
+          <iframe class="footer-contacts__google-map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3997.151539894556!2d30.322382210467968!3d59.93918135320076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sru!4v1688334562074!5m2!1ses!2sru" width="320" height="362" allowfullscreen title="Мы на карте"></iframe>
+          <noscript>
+            <picture>
+              <source media="(min-width: 1320px)" srcset="img/map-desktop@1x.png 1x, img/map-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/map-tablet@1x.png 1x, img/map-tablet@2x.png 2x">
+              <img class="footer-contacts__map-image" src="img/map-mobile@1x.png" width="320" height="362" alt="Cat Energy на карте." srcset="img/map-mobile@2x.png 2x">
+            </picture>
+          </noscript>
         </div>
       </section>
       <div class="footer-social container">
