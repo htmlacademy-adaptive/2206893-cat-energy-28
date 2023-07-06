@@ -9,7 +9,7 @@
 
   @media (min-width: @desktop-width) {
     padding: 0 0 86px 0;
-    gap: 81px 79px;
+    gap: 80px;
     grid-template-columns: 1fr auto;
     position: relative;
 
@@ -34,7 +34,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 16px;
+    top: 15px;
     left: -@mobile-side-indent;
     width: 100vw;
     min-width: 320px;
@@ -106,6 +106,22 @@
   padding: 13px 0 19px 0;
   position: relative;
 
+  &:nth-child(2) {
+    @media (max-width: (@tablet-width - 0.02)) {
+      padding-top: 12px;
+    }
+
+    @media (min-width: @tablet-width) and (max-width: (@desktop-width - 0.02)) {
+      padding-top: 27px;
+    }
+  }
+
+  &:nth-child(4) {
+    @media (min-width: @tablet-width) and (max-width: (@desktop-width - 0.02)) {
+      padding-top: 26px;
+    }
+  }
+
   @media (max-width: (@tablet-width - 0.02)) {
     &::before {
       content: "";
@@ -149,7 +165,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 10px;
+    margin: 0 auto 0 0;
+    padding: 10px 0;
   }
 }
 
@@ -160,13 +177,14 @@
   margin-bottom: 15px;
 
   @media (min-width: @tablet-width) {
-    margin: 0;
+    margin: 0 2px 0 0;
     gap: 10px;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 13px 20px 0 0;
-    width: 305px;
+    margin-right: 40px;
+    padding: 13px 0 7px 0;
+    width: 285px;
     justify-content: space-between;
   }
 }
@@ -178,9 +196,9 @@
     min-width: 83px;
   }
 
-  @media (min-width: @desktop-width) {
-    text-align: left;
-  }
+  // @media (min-width: @desktop-width) {
+  //   text-align: left;
+  // }
 }
 
 .extra-catalog__specification,
@@ -213,27 +231,27 @@
     linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
     url("../../img/background/gift-background-mobile.png"),
     linear-gradient(#9f9f9f, #9f9f9f);
-  background-position: center 59px, center top, center top, center top;
+  background-position: center 59px, center top, calc(50% + 1px) 1px, center top;
   background-repeat: no-repeat;
-  background-size: 78px 80px, 100%, 280px 290px, 100%;
+  background-size: 78px 80px, 100%, 279px 289px, 100%;
 
   @media (min-width: @tablet-width) {
     min-height: 200px;
-    background-image: url("../../img/svg/sprite.svg#icon_gift"),
+    background-image: url("../../img/svg/sprite.svg#icon_gift_tab"),
       linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
       url("../../img/background/gift-background-tablet.png"),
       linear-gradient(to right, #111111, @base-color);
-    background-position: calc(50% - 196px) calc(50% + 2px), center top, calc(50% - 1px) top, center top;
+    background-position: calc(50% - 236px) calc(50% - 2px), center top, calc(50% - 1px) top, center top;
     background-size: 80px 83px, 100%, 707px 200px, 100%;
   }
 
   @media (min-width: @desktop-width) {
     min-height: 289px;
     min-width: 245px;
-    background-image: url("../../img/svg/icon_gift.svg"),
+    background-image: url("../../img/svg/sprite.svg#icon_gift_tab"),
       linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
       url("../../img/background/gift-background-desktop.png");
-    background-position: calc(50% + 2px) 56px, center top, calc(50% - 1px) top;
+    background-position: calc(50% + 1px) 56px, center top, calc(50% - 1px) top;
     background-size: 80px 83px, 100%, 245px 289px;
   }
 }
@@ -249,6 +267,7 @@
   font-weight: 400;
   font-family: @text-font;
   color: @base-color;
+  transform: translateX(-2px);
 
   @media (min-width: @tablet-width) {
     position: absolute;
@@ -260,9 +279,9 @@
 
   @media (min-width: @desktop-width) {
     position: relative;
-    top: 185px;
+    top: 186px;
     left: 0;
     text-align: center;
-    transform: translateY(0);
+    transform: translate(-1px, 0);
   }
 }

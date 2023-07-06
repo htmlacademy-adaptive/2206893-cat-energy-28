@@ -59,29 +59,3 @@ img {
     white-space: pre;
   }
 }
-
-@media (min-width: @tablet-width) and (max-width: (@desktop-width - 0.02)) {
-  .tablet-br::after {
-    content: "\A";
-    white-space: pre;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .desktop-br::after {
-    content: "\A";
-    white-space: pre;
-  }
-}
-
-.only-mobile-show {
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-}
-
-.not-mobile-show {
-  @media (max-width: (@tablet-width - 0.02)) {
-    display: none;
-  }
-}

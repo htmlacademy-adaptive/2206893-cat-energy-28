@@ -15,6 +15,10 @@
 }
 
 .footer-social__copyright-text {
+  @media (max-width: (@tablet-width - 0.02)) {
+    font-size: 16px;
+  }
+
   @media (min-width: @tablet-width) {
     line-height: 19px;
   }
@@ -31,8 +35,11 @@
 
   @media (min-width: @tablet-width) {
     mask-position: left center;
+    background-color: #111111;
     height: 37px;
+    mask-repeat: no-repeat;
     mask-size: 143px 26px;
+    mask-image: url("../../img/svg/sprite.svg#logo-footer-tab");
   }
 
   &:hover {

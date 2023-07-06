@@ -17,7 +17,7 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
-    padding: 56px 70px;
+    padding: 56px 70px 61px 70px;
   }
 
   @media (min-width: @desktop-width) {
@@ -34,6 +34,7 @@
   max-width: 150px;
 
   @media (min-width: @tablet-width) {
+    margin-top: 4px;
     max-width: 180px;
     line-height: 26px;
   }
@@ -52,6 +53,12 @@
     text-align: right;
     align-items: end;
     max-width: 160px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+    align-items: start;
+    margin-right: 16px;
   }
 }
 

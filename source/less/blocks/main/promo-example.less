@@ -154,9 +154,13 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: calc(100% + 9px);
+    height: calc(100% + 10px);
     border: 1px solid @border-hover-color;
     border-radius: 3px;
+
+    @media (min-width: @tablet-width) {
+      height: calc(100% + 9px);
+    }
   }
 }
 
@@ -176,11 +180,19 @@
   @media (min-width: @desktop-width) {
     text-align: left;
     flex-direction: row;
+    padding-top: 0;
   }
 }
 
 .promo-example__costs-numbers {
-  margin-left: 63px;
+  @media (min-width: @tablet-width) {
+    padding-top: 9px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+    margin-left: 63px;
+  }
 }
 
 .promo-example__slider {

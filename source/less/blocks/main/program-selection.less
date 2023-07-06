@@ -18,6 +18,10 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 54px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 56px;
+  }
 }
 
 .program-selection__form {
@@ -123,8 +127,20 @@
   }
 
   &--owner-presentation {
-    padding: 26px 0 23px 0;
+    padding: 26px 0 24px 0;
     gap: 35px;
+
+    @media (max-width: (@tablet-width - 0.02)) {
+      .program-selection__section-title::before {
+        top: 16px;
+      }
+
+      .program-selection__section-title::after {
+        width: calc(100% + @mobile-side-indent + 14px);
+      }
+    }
+
+
 
     @media (min-width: @tablet-width) {
       padding: 75px 0 65px 0;
@@ -168,7 +184,7 @@
       content: "";
       position: absolute;
       left: 50%;
-      top: 24px;
+      top: 22px;
       width: 100vw;
       height: 2px;
       background-color: @button-color;
@@ -196,6 +212,7 @@
 
   &--extra {
     margin-top: 34px;
+    gap: 12px;
 
     @media (min-width: @tablet-width) {
       gap: 32px 58px;
@@ -361,11 +378,15 @@
   align-self: start;
   max-width: calc(100% - 3 * @mobile-side-indent);
 
+  @media (max-width: (@tablet-width - 0.02)) {
+    line-height: 26px;
+  }
+
   &::before {
     content: "";
     position: absolute;
     left: -@mobile-side-indent;
-    top: 16px;
+    top: 15px;
     width: 100vw;
     min-width: 320px;
     height: 2px;
@@ -374,7 +395,7 @@
 
     @media (min-width: @tablet-width) {
       left: -70px;
-      top: 23px;
+      top: 22px;
     }
 
     @media (min-width: @desktop-width) {
@@ -387,7 +408,7 @@
     position: absolute;
     top: 0;
     left: -@mobile-side-indent;
-    width: calc(100% + @mobile-side-indent + 22px);
+    width: calc(100% + @mobile-side-indent + 23px);
     height: 100%;
     background-color: @base-color;
     z-index: -1;
@@ -459,6 +480,7 @@
   &--owner {
     padding: 13px 45px 12px 14px;
     max-width: calc(100vw - 2 * @mobile-side-indent - 60px);
+    border-color: @border-hover-color;
 
     @media (min-width: @tablet-width) {
       padding: 10px 45px 10px 19px;
@@ -495,7 +517,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 100%;
+    width: calc(100% - 2px);
     margin: 0 1px;
   }
 }

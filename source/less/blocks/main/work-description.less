@@ -1,5 +1,5 @@
 .work-description {
-  padding: 0 @mobile-side-indent 52px @mobile-side-indent;
+  padding: 0 @mobile-side-indent 49px @mobile-side-indent;
   .flex-style(column, initial, 40px, initial);
 
   @media (min-width: @tablet-width) {
@@ -60,17 +60,17 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 151px 20px 30px 0;
+    padding: 151px 0 30px 0;
   }
 
   &--healthy {
-    background-image: url("../../img/svg/sprite.svg#healthy"), linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85));
+    background-image: url("../../img/svg/sprite.svg#healthy"), linear-gradient(@button-color, @button-color);
     background-size: 30px 32px, 60px 60px;
     background-position: 15px 14px, left top;
 
     @media (min-width: @tablet-width) {
       background-size: 30px 32px, 80px 80px;
-      background-position: 25px 65px, left 40px;
+      background-position: 24px 65px, left 40px;
 
       &::before {
         content: "1";
@@ -80,13 +80,13 @@
   }
 
   &--fast {
-    background-image: url("../../img/svg/sprite.svg#fast"), linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85));
+    background-image: url("../../img/svg/sprite.svg#fast"), linear-gradient(@button-color, @button-color);
     background-size: 26px 29px, 60px 60px;
     background-position: 18px 16px, left top;
 
     @media (min-width: @tablet-width) {
       background-size: 26px 29px, 80px 80px;
-      background-position: 28px 66px, left 40px;
+      background-position: 27px 66px, left 40px;
 
       &::before {
         content: "2";
@@ -95,13 +95,13 @@
   }
 
   &--replace {
-    background-image: url("../../img/svg/sprite.svg#replace"), linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85));
+    background-image: url("../../img/svg/sprite.svg#replace"), linear-gradient(@button-color, @button-color);
     background-size: 25px 30px, 60px 60px;
     background-position: 18px 15px, left top;
 
     @media (min-width: @tablet-width) {
       background-size: 25px 30px, 80px 80px;
-      background-position: 29px 65px, left 40px;
+      background-position: 28px 65px, left 40px;
 
       &::before {
         content: "3";
@@ -110,13 +110,13 @@
   }
 
   &--result {
-    background-image: url("../../img/svg/sprite.svg#result"), linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85));
+    background-image: url("../../img/svg/sprite.svg#result"), linear-gradient(@button-color, @button-color);
     background-size: 26px 30px, 60px 60px;
     background-position: 18px 15px, left top;
 
     @media (min-width: @tablet-width) {
       background-size: 26px 30px, 80px 80px;
-      background-position: 28px 65px, left 40px;
+      background-position: 27px 65px, left 40px;
 
       &::before {
         content: "4";

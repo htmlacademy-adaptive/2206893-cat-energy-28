@@ -35,7 +35,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 77px 61px 53px 55px;
+    padding: 77px 61px 55px 52px;
   }
 }
 
@@ -91,6 +91,8 @@
     @media (min-width: @desktop-width) {
       width: 134px;
       height: 56px;
+      left: calc(50% - 2px);
+      top: calc(50% - 2px);
     }
   }
 
@@ -100,6 +102,10 @@
     top: 91px;
     right: 62px;
     left: auto;
+
+    &--slim {
+      top: 92px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -157,23 +163,24 @@
 }
 
 .program-type__link {
-  padding: 4px 47px 4px 0;
+  padding: 4px 48px 4px 0;
   align-self: flex-start;
   text-decoration: none;
   color: @base-text-color;
+  line-height: 16px;
   text-transform: uppercase;
   background-image: url("../../img/svg/sprite.svg#triangle"),
     linear-gradient(@base-text-color, @base-text-color);
   background-position: right 8px center, right 14px center;
   background-repeat: no-repeat;
-  background-size: 9px 12px, 18px 2px;
+  background-size: 7px 12px, 18px 2px;
 
   @media (min-width: @tablet-width) {
     padding-right: 57px;
     line-height: 30px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     padding-right: 58px;
   }
 
