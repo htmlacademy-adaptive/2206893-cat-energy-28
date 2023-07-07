@@ -229,20 +229,18 @@
   text-align: center;
   background-image: url("../../img/svg/sprite.svg#icon_gift"),
     linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-    url("../../img/background/gift-background-mobile.png"),
-    linear-gradient(#9f9f9f, #9f9f9f);
-  background-position: center 59px, center top, calc(50% + 1px) 1px, center top;
+    url("../../img/background/gift-background-mobile.png");
+  background-position: center 59px, center top, center;
   background-repeat: no-repeat;
-  background-size: 78px 80px, 100%, 279px 289px, 100%;
+  background-size: 78px 80px, 100%, cover;
 
   @media (min-width: @tablet-width) {
     min-height: 200px;
     background-image: url("../../img/svg/sprite.svg#icon_gift_tab"),
       linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-      url("../../img/background/gift-background-tablet.png"),
-      linear-gradient(to right, #111111, @base-color);
-    background-position: calc(50% - 236px) calc(50% - 2px), center top, calc(50% - 1px) top, center top;
-    background-size: 80px 83px, 100%, 707px 200px, 100%;
+      url("../../img/background/gift-background-tablet.png");
+    background-position: calc(50% - 236px) calc(50% - 2px), center top, center;
+    background-size: 80px 83px, 100%, cover;
   }
 
   @media (min-width: @desktop-width) {
@@ -251,8 +249,8 @@
     background-image: url("../../img/svg/sprite.svg#icon_gift_tab"),
       linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
       url("../../img/background/gift-background-desktop.png");
-    background-position: calc(50% + 1px) 56px, center top, calc(50% - 1px) top;
-    background-size: 80px 83px, 100%, 245px 289px;
+    background-position: calc(50% + 1px) 56px, center top, center;
+    background-size: 80px 83px, 100%, cover;
   }
 }
 
