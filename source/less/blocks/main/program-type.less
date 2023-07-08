@@ -1,10 +1,27 @@
 .program-type {
   padding: @mobile-side-indent;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 @tablet-side-indent;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 82px 0 71px 0;
+  }
 }
 
 .program-type__list {
   .list-reset();
   .grid-style(@mobile-side-indent, initial);
+
+  @media (min-width: @tablet-width) {
+    gap: @tablet-side-indent;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: @tablet-side-indent 80px;
+  }
 }
 
 .program-type__item {
@@ -12,6 +29,14 @@
   position: relative;
   background-color: @secondary-color;
   padding: 30px @mobile-side-indent 18px @mobile-side-indent;
+
+  @media (min-width: @tablet-width) {
+    padding: 77px 315px 53px 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 77px 61px 55px 52px;
+  }
 }
 
 .program-type__icon {
@@ -27,56 +52,154 @@
     content: "";
     position: absolute;
     background-repeat: no-repeat;
+    left: 50%;
+    background-size: 100%;
   }
 
   &--slim::before {
     top: -3px;
-    left: 7px;
     width: 36px;
     height: 50px;
     background-image: url("../../img/svg/cat-slim.svg");
+    transform: translateX(-50%);
+
+    @media (min-width: @tablet-width) {
+      top: -11px;
+      width: 140px;
+      height: 194px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -6px;
+      width: 70px;
+      height: 97px;
+    }
   }
 
   &--pro::before {
-    top: 11px;
-    left: -9px;
+    top: 50%;
     width: 67px;
     height: 28px;
     background-image: url("../../img/svg/cat-pro.svg");
+    transform: translate(-50%, -50%);
+
+    @media (min-width: @tablet-width) {
+      width: 268px;
+      height: 112px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 134px;
+      height: 56px;
+      left: calc(50% - 2px);
+      top: calc(50% - 2px);
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 200px;
+    height: 200px;
+    top: 91px;
+    right: 62px;
+    left: auto;
+
+    &--slim {
+      top: 92px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100px;
+    height: 100px;
+    top: 47px;
+    right: auto;
+    left: 52px;
   }
 }
 
 .program-type__title {
   padding-left: 71px;
   margin-bottom: 29px;
-  line-height: 37px;
   text-transform: uppercase;
+
+  @media (max-width: (@tablet-width - 0.02)) {
+    line-height: 37px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 162px;
+    margin-bottom: 73px;
+  }
 }
 
 .program-type__text {
   margin-bottom: 38px;
   position: relative;
 
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: -23px;
-    left: 0;
-    height: 1px;
-    width: 100%;
-    background-color: @border-color;
+  @media (max-width: (@tablet-width - 0.02)) {
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -23px;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: @border-color;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 23px;
   }
 }
 
 .program-type__link {
-  padding: 4px 47px 4px 0;
+  padding: 4px 48px 4px 0;
   align-self: flex-start;
   text-decoration: none;
   color: @base-text-color;
+  line-height: 16px;
   text-transform: uppercase;
-  background-image: url("../../img/svg/triangle-icon.svg"),
+  background-image: url("../../img/svg/sprite.svg#triangle"),
     linear-gradient(@base-text-color, @base-text-color);
   background-position: right 8px center, right 14px center;
   background-repeat: no-repeat;
-  background-size: 9px 12px, 18px 2px;
+  background-size: 7px 12px, 18px 2px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 57px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: auto;
+    padding-right: 58px;
+  }
+
+  &:hover {
+    background-position: right center, right 6px center;
+    background-size: 9px 12px, 26px 2px;
+  }
+
+  &:active {
+    background-position: right center, right 6px center;
+    background-size: 9px 12px, 26px 2px;
+    opacity: 0.3;
+  }
+
+  &:focus-visible {
+    opacity: 0.3;
+    outline: 2px solid @base-text-color;
+    background-position: right center, right 6px center;
+    background-size: 9px 12px, 26px 2px;
+  }
 }

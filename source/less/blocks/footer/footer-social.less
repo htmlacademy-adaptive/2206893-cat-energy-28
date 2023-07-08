@@ -15,23 +15,44 @@
 }
 
 .footer-social__copyright-text {
+  @media (max-width: (@tablet-width - 0.02)) {
+    font-size: 16px;
+  }
+
   @media (min-width: @tablet-width) {
     line-height: 19px;
   }
 }
 
 .footer-social__logo-link {
+  position: relative;
   background-color: #111111;
   height: 24px;
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: 128px 24px;
-  mask-image: url("../../img/svg/cat-energy-logo-footer.svg");
+  mask-image: url("../../img/svg/sprite.svg#logo-footer");
 
   @media (min-width: @tablet-width) {
     mask-position: left center;
+    background-color: #111111;
     height: 37px;
+    mask-repeat: no-repeat;
     mask-size: 143px 26px;
+    mask-image: url("../../img/svg/sprite.svg#logo-footer-tab");
+  }
+
+  &:hover {
+    background-color: #3e3e3e;
+  }
+
+  &:active {
+    background-color: #6b6b6b;
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: #3e3e3e;
   }
 }
 
@@ -71,16 +92,30 @@
   mask-position: center;
   mask-size: 28px 22px;
 
+  &:hover {
+    background-color: @button-color;
+  }
+
+  &:active {
+    background-color: @button-color;
+    opacity: 0.3;
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: @button-color;
+  }
+
   &--vkontakte {
-    mask-image: url("../../img/svg/vk-icon.svg");
+    mask-image: url("../../img/svg/sprite.svg#vk");
   }
 
   &--youtube {
-    mask-image: url("../../img/svg/youtube-icon.svg");
+    mask-image: url("../../img/svg/sprite.svg#youtube");
   }
 
   &--telegram {
-    mask-image: url("../../img/svg/telegram-icon.svg");
+    mask-image: url("../../img/svg/sprite.svg#telegram");
   }
 
   @media (min-width: @tablet-width) {
@@ -104,8 +139,28 @@
     height: 34px;
     background-color: @icon-color;
     mask-repeat: no-repeat;
-    mask-image: url("../../img/svg/html-academy-icon.svg");
+    mask-image: url("../../img/svg/sprite.svg#html-academy");
     transform: translateY(-50%);
+  }
+
+  &:hover::before {
+    background-color: @button-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:active::before {
+    background-color: @button-color;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:focus-visible::before {
+    background-color: @button-color;
   }
 
   @media (min-width: @tablet-width) {

@@ -6,27 +6,26 @@
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 1440px;
-    margin: 0 auto;
+    padding: 95px 110px;
+    min-height: 400px;
   }
 }
 
 .footer-contacts__text-container {
   .flex-style(initial, initial, initial, initial);
   padding: 26px @mobile-side-indent;
+  position: relative;
 
   @media (min-width: @tablet-width) {
-    padding: 56px 70px;
+    padding: 56px 70px 61px 70px;
   }
 
   @media (min-width: @desktop-width) {
-    position: absolute;
-    top: 95px;
-    left: 110px;
-    padding-left: 56px 60px 56px 80px;
+    padding: 56px 60px 56px 80px;
+    left: calc(50% - 610px);
     width: 565px;
-    z-index: 1;
     background-color: @base-color;
+    z-index: 1;
   }
 }
 
@@ -35,6 +34,7 @@
   max-width: 150px;
 
   @media (min-width: @tablet-width) {
+    margin-top: 4px;
     max-width: 180px;
     line-height: 26px;
   }
@@ -54,6 +54,12 @@
     align-items: end;
     max-width: 160px;
   }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+    align-items: start;
+    margin-right: 16px;
+  }
 }
 
 .footer-contacts__street {
@@ -62,12 +68,66 @@
   }
 }
 
+.footer-contacts__map {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 165px;
+    left: calc(50% + 20px);
+    width: 57px;
+    height: 53px;
+    background-image: url("../../img/map-pin.png");
+    background-repeat: no-repeat;
+    background-size: 57px 53px;
+    transform: translateX(-50%);
+
+    @media (min-width: @tablet-width) {
+      top: 145px;
+      width: 113px;
+      height: 106px;
+      background-image: url("../../img/map-pin-tablet.png");
+      background-repeat: no-repeat;
+      background-size: 113px 106px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 115px;
+      left: calc(50% + 220px);
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    z-index: 0;
+    height: 100%;
+  }
+}
+
+.footer-contacts__google-map {
+  width: 100%;
+  border: none;
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    height: 400px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 100%;
+  }
+}
+
 .footer-contacts__map-image {
   position: relative;
   left: 0;
   width: 100vw;
   min-width: 320px;
-  max-width: 1440px;
   height: 100%;
   object-fit: cover;
 }
